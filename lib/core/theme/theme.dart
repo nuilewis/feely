@@ -7,20 +7,20 @@ import '../core.dart';
 class AppThemeData {
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
-    scaffoldBackgroundColor: AppColors.white,
+    scaffoldBackgroundColor: AppColors.neutral98,
     iconTheme: const IconThemeData(color: AppColors.black),
     primaryIconTheme: const IconThemeData(color: AppColors.black),
     expansionTileTheme: ExpansionTileThemeData(
       shape: RoundedRectangleBorder(
         side: const BorderSide(width: 1, color: AppColors.neutral90),
-        borderRadius: BorderRadius.circular(kPadding24),
+        borderRadius: BorderRadius.circular(Dimensions.padding24),
       ),
       collapsedShape: RoundedRectangleBorder(
         side: const BorderSide(width: 1, color: AppColors.neutral90),
-        borderRadius: BorderRadius.circular(kPadding16),
+        borderRadius: BorderRadius.circular(Dimensions.padding16),
       ),
       childrenPadding: const EdgeInsets.only(
-          left: kPadding16, right: kPadding16, bottom: kPadding8),
+          left: Dimensions.padding16, right: Dimensions.padding16, bottom: Dimensions.padding8),
     ),
     fontFamily: 'SF Pro',
     textTheme: TextTheme(
@@ -54,7 +54,7 @@ class AppThemeData {
         systemOverlayStyle: SystemUiOverlayStyle.dark,
         elevation: 0,
         backgroundColor: Colors.transparent),
-    cardColor: AppColors.blue95,
+    cardColor: AppColors.peach95,
     elevatedButtonTheme: const ElevatedButtonThemeData(
       style: ButtonStyle(
           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -76,9 +76,9 @@ class AppThemeData {
         )),
     chipTheme: ChipThemeData(
       labelStyle:
-      AppTextStyles.bodyMedium.copyWith(color: AppColors.blue10),
+      AppTextStyles.bodyMedium.copyWith(color: AppColors.peach10),
       elevation: 0,
-      selectedColor: AppColors.blue90,
+      selectedColor: AppColors.peach90,
       backgroundColor: AppColors.neutral95,
       side: BorderSide.none,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
@@ -88,15 +88,15 @@ class AppThemeData {
       thumbColor: const WidgetStatePropertyAll<Color>(AppColors.white),
       trackColor: WidgetStateProperty.resolveWith((states) {
         if (states.contains(WidgetState.selected)) {
-          return AppColors.blue40;
+          return AppColors.peach40;
         }
-        return AppColors.blue90;
+        return AppColors.peach90;
       }),
       trackOutlineColor: WidgetStateProperty.resolveWith((states) {
         if (states.contains(WidgetState.selected)) {
-          return AppColors.blue40;
+          return AppColors.peach40;
         }
-        return AppColors.blue90;
+        return AppColors.peach90;
       }),
       trackOutlineWidth: const WidgetStatePropertyAll<double>(0),
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -104,61 +104,61 @@ class AppThemeData {
     bottomSheetTheme: BottomSheetThemeData(backgroundColor: Colors.transparent),
     colorScheme: ColorScheme.fromSeed(
       brightness: Brightness.light,
-      seedColor: AppColors.blueSeed,
-      primary: AppColors.blueSeed,
+      seedColor: AppColors.peachSeed,
+      primary: AppColors.peachSeed,
       onPrimary: AppColors.white,
-      primaryContainer: AppColors.blue95,
-      onPrimaryContainer: AppColors.blue10,
-      secondary: AppColors.peachSeed,
-      secondaryContainer: AppColors.peach95,
+      primaryContainer: AppColors.peach95,
+      onPrimaryContainer: AppColors.peach10,
+      secondary: AppColors.lilacSeed,
+      secondaryContainer: AppColors.lilac95,
       //Or maybe do Yellow 90
       onSecondary: Colors.white,
-      onSecondaryContainer: AppColors.peach20,
+      onSecondaryContainer: AppColors.lilac20,
       error: AppColors.red50,
       onError: AppColors.white,
       errorContainer: AppColors.red90,
       onErrorContainer: AppColors.red10,
-      tertiary: AppColors.greenSeed,
+      tertiary: AppColors.blueSeed,
       onTertiary: AppColors.white,
-      tertiaryContainer: AppColors.green95,
-      onTertiaryContainer: AppColors.green10,
+      tertiaryContainer: AppColors.blue95,
+      onTertiaryContainer: AppColors.blue10,
     ),
   );
 
   ///--------Dark Theme-------///
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
-    scaffoldBackgroundColor: AppColors.black,
+    scaffoldBackgroundColor: AppColors.neutral05,
     iconTheme: const IconThemeData(color: AppColors.white),
     primaryIconTheme: const IconThemeData(color: AppColors.white),
     expansionTileTheme: ExpansionTileThemeData(
       shape: RoundedRectangleBorder(
         side: const BorderSide(width: 1, color: AppColors.neutral20),
-        borderRadius: BorderRadius.circular(kPadding24),
+        borderRadius: BorderRadius.circular(Dimensions.padding24),
       ),
       collapsedShape: RoundedRectangleBorder(
         side: const BorderSide(width: 1, color: AppColors.neutral20),
-        borderRadius: BorderRadius.circular(kPadding16),
+        borderRadius: BorderRadius.circular(Dimensions.padding16),
       ),
       childrenPadding: const EdgeInsets.only(
-          left: kPadding16, right: kPadding16, bottom: kPadding8),
+          left: Dimensions.padding16, right: Dimensions.padding16, bottom: Dimensions.padding8),
     ),
     switchTheme: SwitchThemeData(
       thumbColor: WidgetStateProperty.resolveWith((states) {
         if (states.contains(WidgetState.selected)) {
-          return AppColors.blue10;
+          return AppColors.peach10;
         }
         return AppColors.neutral70;
       }),
       trackColor: WidgetStateProperty.resolveWith((states) {
         if (states.contains(WidgetState.selected)) {
-          return AppColors.blue70;
+          return AppColors.peach70;
         }
         return AppColors.neutral20;
       }),
       trackOutlineColor: WidgetStateProperty.resolveWith((states) {
         if (states.contains(WidgetState.selected)) {
-          return AppColors.blue70;
+          return AppColors.peach70;
         }
         return AppColors.neutral20;
       }),
@@ -220,7 +220,7 @@ class AppThemeData {
         )),
     chipTheme: ChipThemeData(
       elevation: 0,
-      selectedColor: AppColors.blue60,
+      selectedColor: AppColors.peach60,
       backgroundColor: AppColors.neutral20,
       side: BorderSide.none,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
@@ -229,24 +229,23 @@ class AppThemeData {
 
     colorScheme: ColorScheme.fromSeed(
       brightness: Brightness.dark,
-      seedColor: AppColors.blueSeed,
-      primary: AppColors.blue60,
-      onPrimary: AppColors.blue10,
-      primaryContainer: AppColors.blue10,
-      onPrimaryContainer: AppColors.blue95,
-      secondary: AppColors.peach70,
-      secondaryContainer: AppColors.peach10,
-      //Or maybe do Yellow 90
+      seedColor: AppColors.peachSeed,
+      primary: AppColors.peach60,
+      onPrimary: AppColors.peach10,
+      primaryContainer: AppColors.peach10,
+      onPrimaryContainer: AppColors.peach95,
+      secondary: AppColors.lilac70,
+      secondaryContainer: AppColors.lilac10,
       onSecondary: AppColors.black,
       onSecondaryContainer: Colors.white,
       error: AppColors.red60,
       onError: AppColors.white,
       errorContainer: AppColors.red10,
       onErrorContainer: AppColors.red90,
-      tertiary: AppColors.green70,
+      tertiary: AppColors.blue70,
       onTertiary: AppColors.white,
-      tertiaryContainer: AppColors.green10,
-      onTertiaryContainer: AppColors.green90,
+      tertiaryContainer: AppColors.blue10,
+      onTertiaryContainer: AppColors.blue90,
     ),
   );
 }
