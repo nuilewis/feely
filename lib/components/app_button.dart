@@ -59,7 +59,7 @@ class AppButton extends StatelessWidget {
     Color labelColor = theme.colorScheme.primary;
     switch (buttonType) {
       case ButtonType.primary:
-        labelColor = color ?? theme.colorScheme.onPrimary;
+        labelColor = color ?? Colors.white;
 
         style = ElevatedButton.styleFrom(
           padding: EdgeInsets.symmetric(
@@ -67,9 +67,8 @@ class AppButton extends StatelessWidget {
           ),
           fixedSize: isChipButton! ? const Size.fromHeight(42) : null,
           alignment: Alignment.center,
-          //backgroundColor: backgroundColor ?? theme.colorScheme.primary,
-          backgroundColor: backgroundColor ??  theme.colorScheme.onSurface,
-          foregroundColor: color ??  theme.colorScheme.onPrimary,
+          backgroundColor: backgroundColor ?? theme.colorScheme.primary,
+          foregroundColor: labelColor,
         );
         break;
 

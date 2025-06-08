@@ -44,14 +44,15 @@ class AppInputDecoration {
         focusedBorder: OutlineInputBorder(
           gapPadding: 0,
           borderSide:
-              const BorderSide(width: 1, color: AppColors.blue60),
+              const BorderSide(width: 1, color: AppColors.peach60),
           borderRadius: BorderRadius.circular(12),
+
         ),
         filled: true,
         isDense: true,
-        fillColor: Theme.of(context).cardColor,
+        fillColor: isDarkMode? Colors.white.withValues(alpha: .1) : AppColors.white,
         hintStyle: AppTextStyles.bodyLarge
-            .copyWith(color: isDarkMode ? AppColors.neutral30 : AppColors.neutral70),
+            .copyWith(color: AppColors.neutral70),
         labelStyle:
             AppTextStyles.bodyLarge.copyWith(color: AppColors.black));
   }
@@ -60,7 +61,6 @@ class AppInputDecoration {
     final ThemeData theme = Theme.of(context);
     final bool isDarkMode = theme.brightness == Brightness.dark;
     return InputDecoration(
-
         contentPadding: const EdgeInsets.symmetric(horizontal: 0, vertical: 4),
         errorStyle: AppTextStyles.bodyLarge
             .copyWith(color: Theme.of(context).colorScheme.error),

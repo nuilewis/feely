@@ -9,8 +9,6 @@ enum ChipType { filter, info }
 
 enum Gender { male, female }
 
-enum AppButtonType { primary, secondary, outline, text }
-
 enum AppChipType { filter, info }
 
 

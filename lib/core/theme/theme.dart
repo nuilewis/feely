@@ -107,10 +107,10 @@ class AppThemeData {
       seedColor: AppColors.peachSeed,
       primary: AppColors.peachSeed,
       onPrimary: AppColors.white,
-      primaryContainer: AppColors.peach95,
+      primaryContainer: AppColors.peach90,
       onPrimaryContainer: AppColors.peach10,
       secondary: AppColors.lilacSeed,
-      secondaryContainer: AppColors.lilac95,
+      secondaryContainer: AppColors.lilac90,
       //Or maybe do Yellow 90
       onSecondary: Colors.white,
       onSecondaryContainer: AppColors.lilac20,

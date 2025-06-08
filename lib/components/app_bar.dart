@@ -27,17 +27,17 @@ class CustomAppBar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        const Gap(48),
+        const Gap(Dimensions.padding48),
         Row(
           children: [
             if (showBackButton!)
               IconButton(
                 padding: EdgeInsets.zero,
-                alignment: Alignment.centerLeft,
+                alignment: Alignment.center,
                 onPressed: () {
                   HapticFeedback.mediumImpact();
                   Feedback.forTap(context);
-                  context.router.back();
+                  Navigator.pop(context);
                 },
                 icon: const Icon(FluentIcons.arrow_left_24_regular),
               ),
@@ -57,7 +57,7 @@ class CustomAppBar extends StatelessWidget {
             ),
           ),
 
-        const Gap(32),
+        const Gap(16),
       ],
     );
   }
