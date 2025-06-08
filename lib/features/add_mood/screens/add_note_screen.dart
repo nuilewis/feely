@@ -2,12 +2,12 @@ import 'package:feely/components/app_bar.dart';
 import 'package:feely/components/app_button.dart';
 import 'package:feely/core/core.dart';
 import 'package:feely/features/add_mood/screens/select_activities_screen.dart';
-import 'package:feely/features/add_mood/screens/select_mood_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
 import '../../../core/utils/feelings.dart';
+import 'components/animated_gradient.dart';
 
 class AddNoteScreen extends StatefulWidget {
   final Feelings feeling;

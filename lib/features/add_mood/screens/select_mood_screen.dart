@@ -2,12 +2,12 @@ import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:feely/components/app_button.dart';
 import 'package:feely/core/core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:mesh_gradient/mesh_gradient.dart';
 
 import '../../../core/utils/feelings.dart';
 import 'add_note_screen.dart';
+import 'components/animated_gradient.dart';
+import 'components/feelint_item.dart';
 
 class SelectMoodScreen extends StatefulWidget {
   const SelectMoodScreen({super.key});
@@ -98,95 +98,3 @@ class _SelectMoodScreenState extends State<SelectMoodScreen> {
   }
 }
 
-class AnimatedGradient extends StatefulWidget {
-  final List<Color> colors;
-  const AnimatedGradient({super.key, required this.colors});
-
-  @override
-  State<AnimatedGradient> createState() => _AnimatedGradientState();
-}
-
-class _AnimatedGradientState extends State<AnimatedGradient> {
-  @override
-  Widget build(BuildContext context) {
-    if (widget.colors.length != 4) {
-      throw ErrorHint("AnimatedGradient must have 4 colors");
-    }
-
-    final theme = Theme.of(context);
-    final Size size = MediaQuery.sizeOf(context);
-    return Stack(
-      children: [
-        SizedBox(
-          width: size.width,
-          height: size.height * .3,
-          child: AnimatedMeshGradient(
-            colors: [
-              widget.colors[0],
-              widget.colors[1],
-              widget.colors[2],
-              widget.colors[3],
-            ],
-            options: AnimatedMeshGradientOptions(
-              // frequency: 5,
-              //  amplitude: 20,
-              //  speed: 5,
-              grain: .3,
-            ),
-          ),
-        ),
-
-        Container(
-          width: size.width,
-          height: size.height * .3,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                theme.scaffoldBackgroundColor,
-                theme.scaffoldBackgroundColor.withValues(alpha: 0),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class FeelingItem extends StatelessWidget {
-  final Feelings feeling;
-  final VoidCallback onPressed;
-  const FeelingItem({
-    super.key,
-    required this.feeling,
-    required this.onPressed,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
-    return InkWell(
-      onTap: onPressed,
-      splashColor: theme.colorScheme.primary.withValues(alpha: 0),
-      splashFactory: InkSparkle.splashFactory,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          SvgPicture.asset(
-            feeling.shape,
-            height: 200,
-            width: 200,
-          ),
-          Text(
-            feeling.label,
-            style: theme.textTheme.titleLarge?.copyWith(
-              color: AppColors.white,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}

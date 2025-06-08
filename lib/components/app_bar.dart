@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:feely/core/core.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';

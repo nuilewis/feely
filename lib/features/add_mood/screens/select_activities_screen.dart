@@ -1,12 +1,11 @@
 import 'package:feely/components/components.dart';
 import 'package:feely/components/selectable_large_chip.dart';
-import 'package:feely/features/add_mood/screens/select_mood_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 
 import '../../../core/theme/constants.dart';
 import '../../../core/utils/feelings.dart';
+import 'components/animated_gradient.dart';
 
 class SelectActivitiesScreen extends StatefulWidget {
   final Feelings feeling;
