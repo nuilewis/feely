@@ -16,10 +16,10 @@ class FeelingItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-    return InkWell(
+    return GestureDetector(
       onTap: onPressed,
-      splashColor: theme.colorScheme.primary.withValues(alpha: 0),
-      splashFactory: InkSparkle.splashFactory,
+      // splashColor: theme.colorScheme.primary.withValues(alpha: 0),
+      // splashFactory: InkSparkle.splashFactory,
       child: Stack(
         alignment: Alignment.center,
         children: [
