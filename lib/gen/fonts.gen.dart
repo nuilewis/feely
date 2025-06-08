@@ -10,6 +10,6 @@
 class FontFamily {
   FontFamily._();
 
-  /// Font family: SF Pro Rounded
-  static const String sFProRounded = 'SF Pro Rounded';
+  /// Font family: SF Pro
+  static const String sFPro = 'SF Pro';
 }

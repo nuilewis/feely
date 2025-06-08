@@ -31,6 +31,10 @@ dependencies:
   flutter_animate: ^4.5.2
   flutter_gen: ^5.8.0
   hugeicons: ^0.0.11
+  generic_selector: ^0.1.0
+  expandable_page_view: ^1.0.17
+  mesh_gradient: ^1.3.8
+  springster: ^0.4.0+1
 
 
 dev_dependencies:
@@ -50,6 +54,7 @@ flutter:
     - assets/images/
     - assets/svg/
     - assets/svg/illustrations/
+    - assets/svg/shapes/
 
 
   fonts:

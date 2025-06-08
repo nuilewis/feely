@@ -52,8 +52,60 @@ class $AssetsFontsGen {
   ];
 }
 
+class $AssetsSvgGen {
+  const $AssetsSvgGen();
+
+  /// Directory path: assets/svg/shapes
+  $AssetsSvgShapesGen get shapes => const $AssetsSvgShapesGen();
+}
+
+class $AssetsSvgShapesGen {
+  const $AssetsSvgShapesGen();
+
+  /// File path: assets/svg/shapes/angry.svg
+  String get angry => 'assets/svg/shapes/angry.svg';
+
+  /// File path: assets/svg/shapes/anxious.svg
+  String get anxious => 'assets/svg/shapes/anxious.svg';
+
+  /// File path: assets/svg/shapes/calm.svg
+  String get calm => 'assets/svg/shapes/calm.svg';
+
+  /// File path: assets/svg/shapes/content.svg
+  String get content => 'assets/svg/shapes/content.svg';
+
+  /// File path: assets/svg/shapes/excited.svg
+  String get excited => 'assets/svg/shapes/excited.svg';
+
+  /// File path: assets/svg/shapes/frustrated.svg
+  String get frustrated => 'assets/svg/shapes/frustrated.svg';
+
+  /// File path: assets/svg/shapes/happy.svg
+  String get happy => 'assets/svg/shapes/happy.svg';
+
+  /// File path: assets/svg/shapes/okay.svg
+  String get okay => 'assets/svg/shapes/okay.svg';
+
+  /// File path: assets/svg/shapes/tired.svg
+  String get tired => 'assets/svg/shapes/tired.svg';
+
+  /// List of all assets
+  List<String> get values => [
+    angry,
+    anxious,
+    calm,
+    content,
+    excited,
+    frustrated,
+    happy,
+    okay,
+    tired,
+  ];
+}
+
 class Assets {
   const Assets._();
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
+  static const $AssetsSvgGen svg = $AssetsSvgGen();
 }
